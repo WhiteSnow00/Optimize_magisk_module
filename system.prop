@@ -1,0 +1,12 @@
+#维护空进程池
+persist.sys.usap_pool_enabled=true
+#dalvik参数
+dalvik.vm.heapmaxfree=8m
+dalvik.vm.heapminfree=256k
+dalvik.vm.heapstartsize=32m
+#thrashing参数
+ro.lmk.thrashing_limit=54
+ro.lmk.thrashing_limit_decay=78
+#内核writeback
+vm.dirty_ratio=12
+vm.dirty_background_ratio=3

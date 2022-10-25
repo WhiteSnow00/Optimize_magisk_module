@@ -1,0 +1,6 @@
+id=EvoMem
+name=Optimization
+version=v1.0
+versionCode=2212
+author=[_Kanaria]
+description=Optimize [storage] [I/O] [virtual memory], etc. to improve fluency

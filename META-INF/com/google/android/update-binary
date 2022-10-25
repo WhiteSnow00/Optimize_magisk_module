@@ -1,0 +1,24 @@
+#!/sbin/sh
+
+umask 022
+
+ui_print() { echo "$1"; }
+
+require_new_magisk() {
+  ui_print "*******************************"
+  ui_print " 请安装 Magisk v23+! "
+  ui_print "*******************************"
+  exit 1
+}
+
+OUTFD=$2
+ZIPFILE=$3
+mount /data 2>/dev/null
+
+[ -f /data/adb/magisk/util_functions.sh ] || require_new_magisk
+. /data/adb/magisk/util_functions.sh
+[ $MAGISK_VER_CODE -lt 23000 ] && require_new_magisk
+
+install_module
+   ui_print "卡米请在rec删除文件夹/data/adb/modules/EvoMem"
+exit 0
